@@ -1,0 +1,2 @@
+
+    if mind==float('inf'):

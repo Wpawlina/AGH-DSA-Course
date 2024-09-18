@@ -1,0 +1,2 @@
+
+    for el in P:

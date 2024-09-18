@@ -1,0 +1,2 @@
+
+#print(maze(L))  

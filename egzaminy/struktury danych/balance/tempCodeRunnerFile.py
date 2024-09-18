@@ -1,0 +1,2 @@
+
+    minV=float('inf')
