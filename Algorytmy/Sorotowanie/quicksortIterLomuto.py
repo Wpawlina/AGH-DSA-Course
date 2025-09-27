@@ -13,15 +13,15 @@ def quickSort(T,L,P):
     stos=[]
     stos.insert(0,(L,P))
     while len(stos)>0:
-        L,P=stos.pop(0)
+        L,P=stos.pop()
         if L<P:
             q=partition(T,L,P)
             if q-L>P-q:
-                stos.insert(0,(L,q-1))  
-                stos.insert(0,(q+1,P))
+                stos.append((L,q-1))  
+                stos.append((q+1,P))
             else:
-                stos.insert(0,(q+1,P))
-                stos.insert(0,(L,q-1))
+                stos.append((q+1,P))
+                stos.append((L,q-1))
 
 
 

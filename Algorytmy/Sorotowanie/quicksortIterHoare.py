@@ -14,17 +14,17 @@ def partition(T,L,P):
     return i,j
 def quickSort(T,L,P):
     stos=[]
-    stos.insert(0,(L,P))
+    stos.append((L,P))
     while len(stos)>0:
-        L,P=stos.pop(0)
+        L,P=stos.pop()
         if L<P:
             i,j=partition(T,L,P)
             if j-L>P-i:
-                stos.insert(0,(i,P))
-                stos.insert(0,(L,j))  
+                stos.append((i,P))
+                stos.append((L,j))  
             else:
-                stos.insert(0,(L,j))
-                stos.insert(0,(i,P))
+                stos.append((L,j))
+                stos.append((i,P))
 
 tab=[11,22,-33,22,1,0,-100,80,1,9]
 quickSort(tab,0,9)
